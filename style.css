@@ -1,0 +1,2804 @@
+/* =========================
+   ZYRON — GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body.video-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 28px 35px 70px;
+    background: #080808;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+    position: relative;
+
+    width: 100%;
+    min-height: calc(100vh - 98px);
+
+    overflow: hidden;
+    border-radius: 38px;
+
+    background: #111;
+    isolation: isolate;
+}
+
+
+/* =========================
+   HERO VIDEO
+========================= */
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -3;
+}
+
+
+/* =========================
+   RED BOTTOM BASE
+========================= */
+
+.hero-gradient {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 105px;
+    z-index: -2;
+
+    background: #8f0808;
+
+    border-radius: 0 0 38px 38px;
+
+    box-shadow:
+        0 -18px 35px rgba(0, 0, 0, 0.45);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CINEMATIC FADE
+========================= */
+
+.hero-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.02) 45%,
+            rgba(0, 0, 0, 0.35) 78%,
+            rgba(0, 0, 0, 0.72) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.hero-card .navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 26px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+
+/* LOGO */
+
+.hero-card .logo {
+    display: flex;
+
+    align-items: center;
+
+    width: 105px;
+    height: 32px;
+
+    overflow: hidden;
+}
+
+.hero-card .logo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* NAV LINKS */
+
+.hero-card .navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.hero-card .navbar nav a {
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
+
+    color: #fff;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-card .navbar nav a:hover {
+    opacity: 0.55;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: absolute;
+
+    left: 55px;
+    right: 55px;
+
+    bottom: 145px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    gap: 60px;
+}
+
+.hero-description {
+    width: 320px;
+    padding-bottom: 5px;
+}
+
+.hero-description h2 {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 1;
+
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+
+.hero-description h2 strong {
+    font-weight: 700;
+}
+
+.hero-description p {
+    max-width: 300px;
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.hero-services {
+    position: absolute;
+
+    left: 55px;
+    right: 55px;
+
+    bottom: 42px;
+
+    z-index: 10;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding-top: 18px;
+}
+
+.service {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.service span {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.service p {
+    font-size: 8px;
+
+    line-height: 1.45;
+
+    letter-spacing: 1.3px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+    position: relative;
+
+    padding: 160px 45px;
+
+    background: #080808;
+
+    overflow: hidden;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #888;
+
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: clamp(45px, 7vw, 100px);
+
+    letter-spacing: -4px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   WORK CATEGORIES
+========================= */
+
+.work-categories {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 90px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.category {
+    appearance: none;
+
+    border: 1px solid #292929;
+
+    background: #111;
+
+    color: #777;
+
+    padding: 13px 20px;
+
+    border-radius: 100px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category:hover {
+    color: #fff;
+
+    border-color: #555;
+
+    transform: translateY(-2px);
+}
+
+.category.active {
+    color: #fff;
+
+    background: #8f0808;
+
+    border-color: #8f0808;
+
+    box-shadow:
+        0 8px 25px rgba(143, 8, 8, 0.22);
+}
+
+.category.active:hover {
+    background: #a30a0a;
+    border-color: #a30a0a;
+}
+
+
+/* =========================
+   NORMAL PROJECT GRID
+========================= */
+
+.projects {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: start;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.42s ease,
+        filter 0.42s ease;
+}
+
+.projects.category-leaving {
+    opacity: 0;
+
+    filter: blur(6px);
+
+    pointer-events: none;
+}
+
+.projects.category-entering {
+    animation:
+        categoryReveal
+        0.72s
+        cubic-bezier(.16, 1, .3, 1)
+        both;
+}
+
+@keyframes categoryReveal {
+
+    0% {
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    45% {
+        opacity: 0.42;
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+.project {
+    position: relative;
+
+    min-width: 0;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.project.hidden {
+    display: none;
+}
+
+
+/* ==================================================
+   VERTICAL PROJECTS
+   INCLUDING REAL ESTATE
+================================================== */
+
+.fashion-project .project-image,
+.fnb-project .project-image,
+.vibes-project .project-image,
+.interview-project .project-image,
+.commercial-project .project-image,
+.real-estate-project .project-image {
+
+    aspect-ratio: 9 / 16;
+}
+
+
+/* =========================
+   HORIZONTAL PROJECTS
+========================= */
+
+.horizontal-project {
+    grid-column: span 2;
+}
+
+.horizontal-project .project-image {
+    aspect-ratio: 16 / 9;
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #111;
+
+    isolation: isolate;
+
+    transform: none !important;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.project-cover {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    z-index: 1;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.8s cubic-bezier(.2,.7,.2,1),
+        filter 0.5s ease;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.project-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    z-index: 2;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+
+/* =========================
+   CINEMATIC GRADIENT
+========================= */
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 48%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.94) 100%
+        );
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-button {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    background:
+        rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+
+    z-index: 6;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.project:hover .play-button {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    background: #8f0808;
+}
+
+
+/* =========================
+   PROJECT INFO
+========================= */
+
+.project-info {
+    position: absolute;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 6;
+
+    padding: 0;
+}
+
+.project-info h3 {
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    letter-spacing: 1.4px;
+
+    font-weight: 600;
+
+    color: #fff;
+}
+
+.project-info p {
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.8px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.project:hover .project-cover {
+    transform: scale(1.045);
+
+    filter: brightness(0.82);
+}
+
+
+/* =========================
+   PLAYING
+========================= */
+
+.project.playing .project-cover {
+    opacity: 0;
+}
+
+.project.playing .project-video {
+    opacity: 1;
+}
+
+.project.playing .play-button {
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CATEGORY TRANSITION LIGHT
+================================================== */
+
+.category-transition-light {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9990;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(143, 8, 8, 0.14),
+            transparent 56%
+        );
+
+    transition:
+        opacity 0.25s ease;
+}
+
+.category-transition-light.active {
+    opacity: 1;
+}
+
+
+/* ==================================================
+   ALL VIEW — 3D CAROUSEL
+================================================== */
+
+.projects.all-view {
+
+    --active-project-bg: none;
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    perspective: 1800px;
+
+    transform-style: preserve-3d;
+
+    isolation: isolate;
+
+    background: #080808;
+
+    opacity: 1;
+
+    filter: none;
+}
+
+
+/* ==================================================
+   ALL VIEW — DYNAMIC BACKGROUND
+================================================== */
+
+.projects.all-view::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -4%;
+
+    z-index: -3;
+
+    background-image:
+        var(--active-project-bg);
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    filter:
+        blur(3px)
+        brightness(0.88)
+        saturate(108%)
+        contrast(0.98);
+
+    transform: scale(1.06);
+
+    opacity: 0.88;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s ease;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   ALL VIEW — OVERLAY
+================================================== */
+
+.projects.all-view::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            ellipse 48% 42% at center center,
+            rgba(0, 0, 0, 0.04) 0%,
+            rgba(0, 0, 0, 0.15) 45%,
+            rgba(0, 0, 0, 0.34) 100%
+        ),
+
+        linear-gradient(
+            to bottom,
+            rgba(8, 8, 8, 0.10) 0%,
+            rgba(8, 8, 8, 0.02) 28%,
+            transparent 48%,
+            rgba(8, 8, 8, 0.12) 60%,
+            rgba(8, 8, 8, 0.58) 78%,
+            #080808 100%
+        );
+}
+
+
+/* =========================
+   ALL CARDS
+========================= */
+
+.projects.all-view .project {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    padding: 0;
+    margin: 0;
+
+    width: 270px;
+
+    min-width: 270px;
+
+    transform-style: preserve-3d;
+
+    transform-origin: center center;
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+
+    transition:
+        transform 0.72s cubic-bezier(.2,.75,.2,1),
+        opacity 0.55s ease,
+        filter 0.55s ease;
+
+    z-index: 10;
+}
+
+
+/* ==================================================
+   ALL VIEW — VERTICAL PROJECTS
+   INCLUDING REAL ESTATE
+================================================== */
+
+.projects.all-view
+.fashion-project,
+.projects.all-view
+.fnb-project,
+.projects.all-view
+.vibes-project,
+.projects.all-view
+.interview-project,
+.projects.all-view
+.commercial-project,
+.projects.all-view
+.real-estate-project {
+
+    width: 270px;
+
+    min-width: 270px;
+}
+
+
+/* =========================
+   ALL VIEW — HORIZONTAL
+========================= */
+
+.projects.all-view
+.horizontal-project {
+
+    width: 540px;
+
+    min-width: 540px;
+
+    grid-column: auto;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.projects.all-view .project-image {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+        rgba(15, 15, 15, 0.30);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(0, 0, 0, 0.58),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.10),
+
+        inset 0 -1px 0
+        rgba(255, 255, 255, 0.03);
+
+    backdrop-filter:
+        blur(12px)
+        saturate(120%);
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(120%);
+}
+
+
+/* ==================================================
+   ALL VIEW — VERTICAL RATIO
+   INCLUDING REAL ESTATE
+================================================== */
+
+.projects.all-view
+.fashion-project
+.project-image,
+
+.projects.all-view
+.fnb-project
+.project-image,
+
+.projects.all-view
+.vibes-project
+.project-image,
+
+.projects.all-view
+.interview-project
+.project-image,
+
+.projects.all-view
+.commercial-project
+.project-image,
+
+.projects.all-view
+.real-estate-project
+.project-image {
+
+    aspect-ratio:
+        9 / 16 !important;
+}
+
+
+/* =========================
+   ALL VIEW — HORIZONTAL RATIO
+========================= */
+
+.projects.all-view
+.horizontal-project
+.project-image {
+
+    aspect-ratio:
+        16 / 9 !important;
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.projects.all-view
+.project-image::after {
+
+    height: 62%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.08) 30%,
+            rgba(0, 0, 0, 0.90) 100%
+        );
+}
+
+
+/* =========================
+   GLASS SHINE
+========================= */
+
+.projects.all-view
+.project-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255, 255, 255, 0.10),
+            transparent 18%,
+            transparent 70%,
+            rgba(255, 255, 255, 0.03)
+        );
+
+    opacity: 0.42;
+}
+
+
+/* =========================
+   ACTIVE CARD
+========================= */
+
+.projects.all-view
+.project.carousel-active {
+
+    filter:
+        drop-shadow(
+            0 35px 80px
+            rgba(143, 8, 8, 0.20)
+        );
+}
+
+.projects.all-view
+.project.carousel-active
+.project-image {
+
+    border-color:
+        rgba(255, 255, 255, 0.40);
+
+    box-shadow:
+
+        0 45px 110px
+        rgba(0, 0, 0, 0.68),
+
+        0 0 65px
+        rgba(143, 8, 8, 0.14),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.14);
+}
+
+.projects.all-view
+.project.carousel-active
+.project-cover {
+
+    transform:
+        scale(1.02);
+}
+
+
+/* =========================
+   ALL PLAY
+========================= */
+
+.projects.all-view
+.play-button {
+
+    width: 64px;
+
+    height: 64px;
+
+    font-size: 7px;
+
+    background:
+        rgba(0, 0, 0, 0.20);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.62);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.30);
+}
+
+.projects.all-view
+.project.carousel-active
+.play-button {
+
+    background:
+        rgba(143, 8, 8, 0.72);
+
+    border-color:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================
+   ALL INFO
+========================= */
+
+.projects.all-view
+.project-info {
+
+    left: 22px;
+
+    right: 22px;
+
+    bottom: 22px;
+}
+
+.projects.all-view
+.project-info h3 {
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    letter-spacing: 1.4px;
+
+    text-shadow:
+        0 3px 15px
+        rgba(0, 0, 0, 0.55);
+}
+
+.projects.all-view
+.project-info p {
+
+    margin-top: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.8px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================
+   ALL HIDDEN PROJECTS
+========================= */
+
+.projects.all-view
+.project.hidden {
+
+    display: block;
+}
+
+
+/* =========================
+   ALL CATEGORY BAR
+========================= */
+
+.work:has(.projects.all-view)
+.work-categories {
+
+    padding: 8px;
+
+    margin-bottom: 55px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 999px;
+
+    background:
+        rgba(20, 20, 20, 0.38);
+
+    backdrop-filter:
+        blur(20px)
+        saturate(130%);
+
+    -webkit-backdrop-filter:
+        blur(20px)
+        saturate(130%);
+
+    box-shadow:
+
+        0 18px 50px
+        rgba(0, 0, 0, 0.35),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.06);
+}
+
+.work:has(.projects.all-view)
+.category {
+
+    background: transparent;
+
+    border-color: transparent;
+}
+
+.work:has(.projects.all-view)
+.category:hover {
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    transform:
+        translateY(-1px);
+}
+
+.work:has(.projects.all-view)
+.category.active {
+
+    background:
+        linear-gradient(
+            180deg,
+            #a30a0a,
+            #820707
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 8px 22px
+        rgba(143, 8, 8, 0.35);
+}
+
+
+/* ==================================================
+   VIDEO MODAL
+================================================== */
+
+.video-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100dvh;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.90);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0s linear 0.45s;
+}
+
+.video-modal::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -40px;
+
+    background:
+        rgba(0, 0, 0, 0.24);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.55s ease;
+}
+
+.video-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0s linear 0s;
+}
+
+.video-modal.active::before {
+
+    opacity: 1;
+}
+
+
+/* =========================
+   VIDEO MODAL CONTENT
+========================= */
+
+.video-modal-content {
+
+    position: relative;
+
+    width:
+        min(92vw, 1500px);
+
+    height:
+        min(88dvh, 850px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform:
+        translate3d(
+            var(--video-start-x, 0px),
+            var(--video-start-y, 0px),
+            0
+        )
+        scale(
+            var(--video-start-scale, 0.82)
+        );
+
+    opacity: 0;
+
+    transform-origin:
+        center center;
+
+    transition:
+        transform
+        0.72s
+        cubic-bezier(.16, 1, .3, 1),
+
+        opacity
+        0.34s ease;
+
+    will-change:
+        transform,
+        opacity;
+
+    z-index: 2;
+}
+
+.video-modal.active
+.video-modal-content {
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1);
+
+    opacity: 1;
+}
+
+
+/* =========================
+   MODAL VIDEO
+========================= */
+
+.video-modal video {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: #000;
+
+    border-radius: 12px;
+
+    box-shadow:
+
+        0 30px 100px
+        rgba(0, 0, 0, 0.75),
+
+        0 0 0 1px
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.video-modal-close {
+
+    position: fixed;
+
+    top: 22px;
+
+    right: 22px;
+
+    width: 46px;
+
+    height: 46px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.20);
+
+    border-radius: 50%;
+
+    background:
+        rgba(18, 18, 18, 0.50);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    color: #fff;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform:
+        scale(0.78)
+        rotate(-15deg);
+
+    transition:
+        opacity
+        0.35s ease
+        0.15s,
+
+        transform
+        0.55s
+        cubic-bezier(.16, 1, .3, 1),
+
+        background
+        0.25s ease;
+}
+
+.video-modal.active
+.video-modal-close {
+
+    opacity: 1;
+
+    transform:
+        scale(1)
+        rotate(0);
+}
+
+.video-modal-close:hover {
+
+    background:
+        rgba(143, 8, 8, 0.85);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    padding: 200px 45px;
+
+    max-width: 1300px;
+
+    background: #080808;
+}
+
+.about h2 {
+
+    font-size:
+        clamp(45px, 7vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    font-weight: 500;
+}
+
+.about h2 span {
+    color: #666;
+}
+
+.about-text {
+
+    max-width: 500px;
+
+    margin-top: 60px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #888;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    min-height: 80vh;
+
+    padding: 160px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #080808;
+}
+
+.contact h2 {
+
+    font-size:
+        clamp(50px, 8vw, 120px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    font-weight: 500;
+}
+
+.contact h2 span {
+    color: #666;
+}
+
+.contact-link {
+
+    margin-top: 70px;
+
+    width: fit-content;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    border-bottom:
+        1px solid #555;
+
+    padding-bottom: 10px;
+
+    transition:
+        border-color 0.3s ease;
+}
+
+.contact-link:hover {
+    border-color: #fff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 30px 45px;
+
+    border-top:
+        1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    background: #080808;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .projects {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .horizontal-project {
+        grid-column: span 2;
+    }
+
+    .projects.all-view {
+        height: 570px;
+    }
+
+    .projects.all-view
+    .project {
+
+        width: 230px;
+
+        min-width: 230px;
+    }
+
+    .projects.all-view
+    .fashion-project,
+    .projects.all-view
+    .fnb-project,
+    .projects.all-view
+    .vibes-project,
+    .projects.all-view
+    .interview-project,
+    .projects.all-view
+    .commercial-project,
+    .projects.all-view
+    .real-estate-project {
+
+        width: 230px;
+
+        min-width: 230px;
+    }
+
+    .projects.all-view
+    .horizontal-project {
+
+        width: 450px;
+
+        min-width: 450px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+        min-height:
+            100svh;
+
+        padding:
+            14px 14px 30px;
+    }
+
+    .hero-card {
+
+        min-height:
+            calc(100svh - 44px);
+
+        border-radius:
+            27px;
+    }
+
+
+    /* NAV */
+
+    .hero-card .navbar {
+
+        padding:
+            20px 18px;
+    }
+
+    .hero-card .logo {
+
+        width:
+            90px;
+
+        height:
+            28px;
+    }
+
+    .hero-card .navbar nav {
+
+        gap:
+            13px;
+    }
+
+    .hero-card .navbar nav a {
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            1px;
+    }
+
+
+    /* HERO CONTENT */
+
+    .hero-content {
+
+        left:
+            22px;
+
+        right:
+            22px;
+
+        bottom:
+            135px;
+
+        display:
+            block;
+    }
+
+    .hero-description {
+
+        width:
+            100%;
+
+        margin-top:
+            30px;
+    }
+
+    .hero-description h2 {
+
+        font-size:
+            22px;
+
+        margin-bottom:
+            10px;
+    }
+
+    .hero-description p {
+
+        max-width:
+            275px;
+
+        font-size:
+            9px;
+    }
+
+
+    /* SERVICES */
+
+    .hero-services {
+
+        left:
+            22px;
+
+        right:
+            22px;
+
+        bottom:
+            25px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            14px 10px;
+
+        padding-top:
+            12px;
+    }
+
+    .hero-gradient {
+
+        height:
+            75px;
+
+        border-radius:
+            0 0 27px 27px;
+    }
+
+    .service {
+
+        gap:
+            8px;
+    }
+
+    .service p {
+
+        font-size:
+            6.5px;
+
+        letter-spacing:
+            0.8px;
+    }
+
+
+    /* =========================
+       WORK
+    ========================= */
+
+    .work {
+
+        padding:
+            120px 20px;
+    }
+
+    .section-heading {
+
+        margin-bottom:
+            40px;
+    }
+
+    .section-heading h2 {
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    /* NORMAL CATEGORY BAR */
+
+    .work-categories {
+
+        gap:
+            7px;
+
+        margin-bottom:
+            60px;
+
+        padding-bottom:
+            20px;
+
+        overflow-x:
+            auto;
+
+        flex-wrap:
+            nowrap;
+
+        scrollbar-width:
+            none;
+
+        -ms-overflow-style:
+            none;
+    }
+
+    .work-categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category {
+
+        flex:
+            0 0 auto;
+
+        padding:
+            11px 15px;
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+
+    /* =========================
+       NORMAL GRID
+    ========================= */
+
+    .projects:not(.all-view) {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            12px;
+    }
+
+    .projects:not(.all-view)
+    .horizontal-project {
+
+        grid-column:
+            span 2;
+    }
+
+
+    /* =========================
+       NORMAL VERTICAL
+       INCLUDING REAL ESTATE
+    ========================= */
+
+    .projects:not(.all-view)
+    .fashion-project .project-image,
+
+    .projects:not(.all-view)
+    .fnb-project .project-image,
+
+    .projects:not(.all-view)
+    .vibes-project .project-image,
+
+    .projects:not(.all-view)
+    .interview-project .project-image,
+
+    .projects:not(.all-view)
+    .commercial-project .project-image,
+
+    .projects:not(.all-view)
+    .real-estate-project .project-image {
+
+        aspect-ratio:
+            9 / 16;
+    }
+
+
+    /* =========================
+       NORMAL HORIZONTAL
+    ========================= */
+
+    .projects:not(.all-view)
+    .horizontal-project
+    .project-image {
+
+        aspect-ratio:
+            16 / 9;
+    }
+
+
+    .projects:not(.all-view)
+    .project-image {
+
+        border-radius:
+            9px;
+    }
+
+    .projects:not(.all-view)
+    .project-info {
+
+        left:
+            12px;
+
+        right:
+            12px;
+
+        bottom:
+            12px;
+    }
+
+    .projects:not(.all-view)
+    .project-info h3 {
+
+        font-size:
+            8px;
+
+        line-height:
+            1.3;
+
+        letter-spacing:
+            0.9px;
+    }
+
+    .projects:not(.all-view)
+    .project-info p {
+
+        margin-top:
+            5px;
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            0.5px;
+    }
+
+    .projects:not(.all-view)
+    .play-button {
+
+        width:
+            45px;
+
+        height:
+            45px;
+
+        font-size:
+            6px;
+    }
+
+
+    /* ==================================================
+       ALL FULLSCREEN MOBILE
+    ================================================== */
+
+    .work:has(.projects.all-view) {
+
+        width:
+            100%;
+
+        min-height:
+            100svh;
+
+        padding:
+            42px 0 0;
+
+        overflow:
+            hidden;
+
+        background:
+            #080808;
+    }
+
+
+    /* ALL TITLE */
+
+    .work:has(.projects.all-view)
+    .section-heading {
+
+        padding:
+            0 20px;
+
+        margin-bottom:
+            24px;
+
+        position:
+            relative;
+
+        z-index:
+            30;
+    }
+
+    .work:has(.projects.all-view)
+    .section-heading .eyebrow {
+
+        margin-bottom:
+            14px;
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            2.6px;
+    }
+
+    .work:has(.projects.all-view)
+    .section-heading h2 {
+
+        font-size:
+            clamp(42px, 13vw, 64px);
+
+        letter-spacing:
+            -3px;
+
+        line-height:
+            0.92;
+    }
+
+
+    /* ALL CATEGORY BAR */
+
+    .work:has(.projects.all-view)
+    .work-categories {
+
+        width:
+            100%;
+
+        margin:
+            0;
+
+        padding:
+            7px 8px;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.10);
+
+        border-left:
+            none;
+
+        border-right:
+            none;
+
+        border-radius:
+            0;
+
+        background:
+            rgba(10,10,10,0.46);
+
+        backdrop-filter:
+            blur(20px)
+            saturate(130%);
+
+        -webkit-backdrop-filter:
+            blur(20px)
+            saturate(130%);
+
+        display:
+            flex;
+
+        flex-wrap:
+            nowrap;
+
+        gap:
+            6px;
+
+        overflow-x:
+            auto;
+
+        scrollbar-width:
+            none;
+
+        -ms-overflow-style:
+            none;
+
+        position:
+            relative;
+
+        z-index:
+            35;
+    }
+
+    .work:has(.projects.all-view)
+    .work-categories::-webkit-scrollbar {
+
+        display:
+            none;
+    }
+
+    .work:has(.projects.all-view)
+    .category {
+
+        flex:
+            0 0 auto;
+
+        padding:
+            10px 15px;
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            1.1px;
+
+        border:
+            1px solid transparent;
+
+        background:
+            transparent;
+
+        color:
+            rgba(255,255,255,0.48);
+
+        transform:
+            none;
+    }
+
+    .work:has(.projects.all-view)
+    .category.active {
+
+        color:
+            #fff;
+
+        background:
+            linear-gradient(
+                180deg,
+                #a30a0a,
+                #850707
+            );
+
+        border-color:
+            rgba(255,255,255,0.10);
+
+        box-shadow:
+            0 7px 20px
+            rgba(143,8,8,0.30);
+    }
+
+
+    /* ==================================================
+       ALL CAROUSEL
+    ================================================== */
+
+    .projects.all-view {
+
+        width:
+            100vw;
+
+        max-width:
+            100vw;
+
+        height:
+            calc(100svh - 155px);
+
+        min-height:
+            500px;
+
+        margin:
+            0;
+
+        padding:
+            0;
+
+        display:
+            block;
+
+        position:
+            relative;
+
+        overflow:
+            hidden;
+
+        perspective:
+            1100px;
+
+        transform-style:
+            preserve-3d;
+
+        background:
+            #080808;
+
+        box-shadow:
+            none;
+    }
+
+
+    /* MOBILE BACKGROUND */
+
+    .projects.all-view::after {
+
+        inset:
+            -5%;
+
+        background-image:
+            var(--active-project-bg);
+
+        background-position:
+            center center;
+
+        background-size:
+            cover;
+
+        background-repeat:
+            no-repeat;
+
+        filter:
+            blur(3px)
+            brightness(0.86)
+            saturate(108%)
+            contrast(0.98);
+
+        transform:
+            scale(1.08);
+
+        opacity:
+            0.90;
+    }
+
+
+    /* MOBILE OVERLAY */
+
+    .projects.all-view::before {
+
+        background:
+
+            radial-gradient(
+                ellipse 58% 44% at center center,
+                rgba(0,0,0,0.02) 0%,
+                rgba(0,0,0,0.13) 45%,
+                rgba(0,0,0,0.28) 100%
+            ),
+
+            linear-gradient(
+                to bottom,
+                rgba(8,8,8,0.06) 0%,
+                transparent 24%,
+                transparent 48%,
+                rgba(8,8,8,0.16) 62%,
+                rgba(8,8,8,0.58) 78%,
+                #080808 100%
+            );
+    }
+
+
+    /* =========================
+       ALL MOBILE CARDS
+    ========================= */
+
+    .projects.all-view .project {
+
+        position:
+            absolute;
+
+        left:
+            50%;
+
+        top:
+            50%;
+
+        width:
+            170px;
+
+        min-width:
+            170px;
+
+        margin:
+            0;
+
+        grid-column:
+            auto !important;
+    }
+
+
+    /* =========================
+       ALL MOBILE VERTICAL
+       INCLUDING REAL ESTATE
+    ========================= */
+
+    .projects.all-view
+    .fashion-project,
+
+    .projects.all-view
+    .fnb-project,
+
+    .projects.all-view
+    .vibes-project,
+
+    .projects.all-view
+    .interview-project,
+
+    .projects.all-view
+    .commercial-project,
+
+    .projects.all-view
+    .real-estate-project {
+
+        width:
+            170px;
+
+        min-width:
+            170px;
+    }
+
+
+    /* =========================
+       ALL MOBILE HORIZONTAL
+    ========================= */
+
+    .projects.all-view
+    .horizontal-project {
+
+        width:
+            300px;
+
+        min-width:
+            300px;
+    }
+
+
+    /* =========================
+       MOBILE VERTICAL RATIO
+       INCLUDING REAL ESTATE
+    ========================= */
+
+    .projects.all-view
+    .fashion-project
+    .project-image,
+
+    .projects.all-view
+    .fnb-project
+    .project-image,
+
+    .projects.all-view
+    .vibes-project
+    .project-image,
+
+    .projects.all-view
+    .interview-project
+    .project-image,
+
+    .projects.all-view
+    .commercial-project
+    .project-image,
+
+    .projects.all-view
+    .real-estate-project
+    .project-image {
+
+        aspect-ratio:
+            9 / 16 !important;
+    }
+
+
+    /* =========================
+       MOBILE HORIZONTAL RATIO
+    ========================= */
+
+    .projects.all-view
+    .horizontal-project
+    .project-image {
+
+        aspect-ratio:
+            16 / 9 !important;
+    }
+
+
+    /* MOBILE CARD */
+
+    .projects.all-view
+    .project-image {
+
+        border-radius:
+            18px;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.18);
+
+        box-shadow:
+
+            0 25px 70px
+            rgba(0,0,0,0.55),
+
+            inset 0 1px 0
+            rgba(255,255,255,0.09);
+    }
+
+
+    /* ACTIVE */
+
+    .projects.all-view
+    .project.carousel-active
+    .project-image {
+
+        border-color:
+            rgba(255,255,255,0.38);
+
+        box-shadow:
+
+            0 35px 85px
+            rgba(0,0,0,0.68),
+
+            0 0 40px
+            rgba(143,8,8,0.13),
+
+            inset 0 1px 0
+            rgba(255,255,255,0.13);
+    }
+
+
+    /* PLAY */
+
+    .projects.all-view
+    .play-button {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            6px;
+    }
+
+
+    /* INFO */
+
+    .projects.all-view
+    .project-info {
+
+        left:
+            13px;
+
+        right:
+            13px;
+
+        bottom:
+            13px;
+    }
+
+    .projects.all-view
+    .project-info h3 {
+
+        font-size:
+            8px;
+
+        line-height:
+            1.3;
+
+        letter-spacing:
+            0.85px;
+    }
+
+    .projects.all-view
+    .project-info p {
+
+        margin-top:
+            5px;
+
+        font-size:
+            6.5px;
+
+        letter-spacing:
+            0.45px;
+    }
+
+
+    /* =========================
+       VIDEO MODAL
+    ========================= */
+
+    .video-modal {
+
+        width:
+            100vw;
+
+        height:
+            100dvh;
+
+        padding:
+            10px;
+    }
+
+    .video-modal-content {
+
+        width:
+            100%;
+
+        height:
+            100%;
+
+        transform:
+            translate3d(
+                var(--video-start-x, 0px),
+                var(--video-start-y, 0px),
+                0
+            )
+            scale(
+                var(--video-start-scale, 0.72)
+            );
+    }
+
+    .video-modal.active
+    .video-modal-content {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    .video-modal video {
+
+        width:
+            100%;
+
+        height:
+            100%;
+
+        border-radius:
+            10px;
+
+        object-fit:
+            contain;
+    }
+
+    .video-modal-close {
+
+        top:
+            16px;
+
+        right:
+            16px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            19px;
+    }
+
+
+    /* =========================
+       CATEGORY TRANSITION
+    ========================= */
+
+    .projects.category-leaving {
+
+        filter:
+            blur(4px);
+
+        opacity:
+            0;
+    }
+
+    .category-transition-light {
+
+        background:
+            radial-gradient(
+                ellipse at center,
+                rgba(143,8,8,0.09),
+                transparent 62%
+            );
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        padding:
+            130px 20px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        padding:
+            130px 20px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+        padding:
+            25px 20px;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+    }
+
+}.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.social-link {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    color: inherit;
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.social-link svg {
+    width: 21px;
+    height: 21px;
+
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 1.5;
+
+    transition: transform 0.35s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+.social-link:hover svg {
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .social-link {
+        width: 46px;
+        height: 46px;
+    }
+
+    .social-link svg {
+        width: 19px;
+        height: 19px;
+    }
+}.fullscreen-bunny-video {
+    background: #000 !important;
+}
